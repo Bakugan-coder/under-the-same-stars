@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d26">
+<title>Under the Same Stars ✦</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+:root{--night:#080d26;--night2:#11183c;--lav:#d9ccff;--pink:#f3c8e2;--gold:#ffe5a8;--muted:#b8bddb;--glass:#ffffff0b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#283365 0%,#11183c 32%,#080d26 72%);color:#fff8ff;font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+#sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;border-radius:50%;background:#fff8d9;box-shadow:0 0 8px 2px #d9ccff66;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.25;transform:scale(.7)}to{opacity:1;transform:scale(1.2)}}
+.moon{position:fixed;top:8%;right:9%;width:66px;height:66px;border-radius:50%;background:#fff0c5;box-shadow:0 0 42px #ffe5a855;opacity:.9;z-index:0}
+.moon:after{content:"";position:absolute;top:-7px;left:18px;width:63px;height:63px;border-radius:50%;background:#17204a}
+.wrap{position:relative;z-index:1;width:min(860px,91%);margin:auto}
+.hero{min-height:95vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 8px 45px}
+.kicker{text-transform:uppercase;letter-spacing:.24em;font-size:.68rem;color:var(--gold)}
+.constellation{font-size:2rem;letter-spacing:.55em;color:var(--lav);margin:30px 0 20px;text-shadow:0 0 22px #d9ccff88}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500}
+h1{font-size:clamp(3.4rem,10vw,6.4rem);line-height:.88;margin:0;letter-spacing:-.035em}
+h1 span{display:block;color:var(--pink);font-style:italic;margin-top:15px}
+.hero p{max-width:510px;color:var(--muted);line-height:1.9;font-size:1rem;margin:28px auto 0}
+.btn{display:inline-block;border:1px solid #f3c8e277;background:linear-gradient(135deg,#f3c8e2,#d9ccff);color:#171634;border-radius:999px;padding:13px 22px;font:600 .9rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 0 28px #d9ccff1a;transition:transform .2s,box-shadow .2s;margin-top:25px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 35px #d9ccff44}
+.btn.ghost{background:#ffffff08;color:#fff8ff;border-color:#d9ccff66}
+section{padding:54px 0}
+.label{text-align:center;text-transform:uppercase;letter-spacing:.2em;font-size:.68rem;color:var(--gold)}
+h2{text-align:center;font-size:clamp(2.5rem,6vw,4rem);line-height:1;margin:12px 0 27px}
+.letter{border:1px solid #d9ccff35;background:linear-gradient(145deg,#ffffff0d,#ffffff04);backdrop-filter:blur(12px);border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 22px 80px #00000020;line-height:2;color:#e8e7f8}
+.letter p{margin:0 0 17px}.letter p:last-child{margin-bottom:0}
+.salutation{font-family:'Cormorant Garamond',serif;color:var(--pink);font-size:1.8rem;line-height:1.3}
+.sign{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);line-height:1.45;margin-top:24px!important}
+.skyline{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.card{border:1px solid #d9ccff2b;background:#ffffff08;border-radius:22px;padding:21px 14px;text-align:center}
+.card .icon{font-size:1.7rem}.card h3{font-size:1.45rem;margin:10px 0 5px;color:var(--pink)}.card p{font-size:.85rem;line-height:1.7;color:var(--muted);margin:0}
+.musicbox,.wishbox{border:1px solid #d9ccff38;background:linear-gradient(145deg,#ffffff0d,#ffffff04);border-radius:26px;padding:28px;text-align:center}
+.musicbox p,.wishbox p{color:var(--muted);line-height:1.8;max-width:540px;margin:0 auto}
+.small{font-size:.78rem;color:#9da5d1!important;margin-top:14px!important}
+#secret{display:none;margin:24px auto 0;max-width:530px;border:1px solid #f3c8e244;background:#f3c8e20b;border-radius:20px;padding:23px;line-height:1.9;color:#f4eaf9;animation:reveal .65s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;color:#9299c2;font-size:.78rem;padding:45px 0 55px}
+.heart{position:fixed;bottom:-30px;z-index:5;pointer-events:none;animation:floatup 4s ease-out forwards}
+@keyframes floatup{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+a{color:var(--lav)}
+@media(max-width:600px){.skyline{grid-template-columns:1fr}.card{padding:18px}.moon{width:48px;height:48px;right:7%;top:5%}.moon:after{width:47px;height:47px;left:14px;top:-5px}.hero{min-height:88vh}}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div><div class="moon" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">a little fairytale, written in starlight</div>
+    <div class="constellation" aria-hidden="true">✦ · ✧ · ✦</div>
+    <h1>For my <span>favorite kind of magic.</span></h1>
+    <p>Somewhere beneath this endless sky, there is a person who makes ordinary days feel a little more magical. This tiny universe is for her. ♡</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Follow the starlight ↓</button>
+  </header>
+
+  <section id="letter">
+    <div class="label">a letter, tucked into the night</div>
+    <h2>My wish for you</h2>
+    <article class="letter">
+      <p class="salutation">Happy Birthday, beautiful soul. ♡</p>
+      <p>If I could give you one thing for your birthday, it would be the chance to see yourself through the kindest eyes — to see how much light you carry, even on the days you don't notice it.</p>
+      <p>I hope this next chapter feels like a fairytale in the little ways: unexpected reasons to smile, dreams that slowly come true, peaceful nights, warm hugs, and people who remind you that you matter.</p>
+      <p>I can't promise every day will be perfect, but I hope there will always be something lovely waiting around the corner. And I hope you never feel you have to be anyone other than yourself to deserve happiness.</p>
+      <p>So tonight, when you look up at the stars, remember that this whole universe is full of possibilities — and I am really glad that, in this huge world, our paths crossed.</p>
+      <p class="sign">With all my affection, under the same stars,<br><span id="sender">someone who cares about you ♡</span></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="label">little wishes for your new chapter</div>
+    <h2>May life bring you…</h2>
+    <div class="skyline">
+      <div class="card"><div class="icon">🌙</div><h3>Softness</h3><p>Quiet moments, restful nights, and room to breathe.</p></div>
+      <div class="card"><div class="icon">✨</div><h3>Wonder</h3><p>New places, brave dreams, and beautiful surprises.</p></div>
+      <div class="card"><div class="icon">💗</div><h3>Love</h3><p>The kind that feels safe, sincere, and easy to believe in.</p></div>
+    </div>
+  </section>
+
+  <section id="music">
+    <div class="label">a little soundtrack</div>
+    <h2>Press play, stargazer</h2>
+    <div class="musicbox">
+      <p>Imagine a soft melody playing while the stars drift overhead. Add a song that means something to both of you using the button below.</p>
+      <button class="btn" onclick="openSong()">♫ Open our song</button>
+      <p class="small">Personalise the song link in the code before publishing. It opens in a new tab; this page won't play audio automatically.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wishbox">
+      <div class="label">one last wish</div>
+      <h2>Make a wish upon a star ✦</h2>
+      <p>Take a little breath, close your eyes, and wish for something your heart truly wants. Whenever you're ready, tap the star.</p>
+      <button class="btn ghost" onclick="revealSecret()">My wish is made ♡</button>
+      <div id="secret">May the year ahead be gentler than you expect, brighter than you imagine, and full of moments that make you think, “I'm so glad I'm here.” You deserve happiness that finds you in the smallest, sweetest ways. Happy Birthday. 🌙</div>
+    </div>
+  </section>
+  <footer>crafted in a little corner of the universe · with care, just for you ♡</footer>
+</div>
+<script>
+  // PERSONALISE THESE TWO VALUES BEFORE PUBLISHING:
+  const HER_NAME = "Cherry";     // Example: "Mira"
+  const YOUR_NAME = "Sweeyheart";    // Example: "Bhargav"
+  // Paste a YouTube or Spotify track URL between the quotes:
+  const SONG_URL = "https://youtu.be/NDjeeJwI08Q?si=kyXhJT3XBG4N8Ozh";
+
+  const sky = document.getElementById('sky');
+  for(let i=0;i<105;i++){
+    const s=document.createElement('i');s.className='star';
+    const size=Math.random()*2.3+0.7;
+    s.style.width=size+'px';s.style.height=size+'px';
+    s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*4)+'s';s.style.animationDuration=(2+Math.random()*4)+'s';
+    sky.appendChild(s);
+  }
+  if(HER_NAME.trim()){
+    document.querySelector('h1').innerHTML='For <span>'+escapeHtml(HER_NAME.trim())+'.</span>';
+    document.title='For '+HER_NAME.trim()+' ✦';
+  }
+  if(YOUR_NAME.trim()) document.getElementById('sender').textContent=YOUR_NAME.trim()+' ♡';
+  function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function openSong(){
+    const url=SONG_URL.trim();
+    if(!url || url==='https://www.youtube.com/'){
+      alert('Add your special song link in the SONG_URL line in index.html first ♡');
+      return;
+    }
+    window.open(url,'_blank','noopener,noreferrer');
+  }
+  function revealSecret(){
+    document.getElementById('secret').style.display='block';
+    for(let i=0;i<24;i++){
+      const h=document.createElement('span');h.className='heart';
+      h.textContent=['✦','♡','✨','💗'][Math.floor(Math.random()*4)];
+      h.style.left=Math.random()*100+'vw';h.style.fontSize=(13+Math.random()*22)+'px';
+      document.body.appendChild(h);setTimeout(()=>h.remove(),4100);
+    }
+  }
+</script>
+</body>
+</html>
